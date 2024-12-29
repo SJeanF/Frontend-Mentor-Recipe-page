@@ -1,0 +1,167 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@font-face {
+    font-family: outifit;
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: young-serif;
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2 {
+    font-family: young-serif, serif;
+    font-weight: normal;
+}
+
+p, strong, li {
+    font-family: outifit, serif;
+}
+
+h1 {
+    color: hsl(24, 5%, 18%);
+}
+
+h2 {
+    color: hsl(14, 45%, 36%)
+}
+
+h3, .table strong {
+    color: hsl(332, 51%, 32%);
+}
+
+strong {
+    color: hsl(14, 45%, 36%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 54%, 90%);
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: 660px;
+    margin: 128px auto;
+    border-radius: 20px;
+}
+
+.introduction{
+    margin-bottom: 60px;
+}
+
+.introduction > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 260px;
+    margin: 40px;
+    border-radius: 20px;
+}
+
+.introduction h1,
+.introduction p{
+    margin-left: 40px;
+    margin-bottom: 40px;
+    width: fit-content;
+}
+
+.time {
+    margin-left: 80px;
+    width: fit-content;
+}
+
+.time h3 {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none; /* Remove os marcadores padrão */
+}
+
+ul li {
+    position: relative;
+    padding-left: 30px; /* Espaço para o marcador */
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: '•'; /* Substitui o marcador padrão */
+    color: black;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0; /* Marca o ponto inicial do marcador */
+    top: 50%; /* Centraliza verticalmente o marcador */
+    transform: translateY(-50%); /* Ajusta o alinhamento */
+}
+
+ol {
+    list-style: none; /* Remove os números padrão */
+    padding-left: 30px; /* Espaço à esquerda para o marcador */
+    counter-reset: item; /* Reseta o contador para garantir que comece do 1 */
+    margin-left: 10px;
+}
+
+ol li {
+    position: relative;
+    padding-left: 30px; /* Espaço para o marcador */
+    margin-bottom: 10px;
+}
+
+ol li::before {
+    content: counter(item) '. '; /* Insere o número seguido de ponto */
+    counter-increment: item; /* Incrementa o contador corretamente para cada item */
+    color: black; /* Cor do número */
+    font-size: 1.2em; /* Tamanho do número */
+    position: absolute;
+    left: 0; /* Alinha o número à esquerda */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar corretamente */
+}
+
+
+.recipe h2 {
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.recipe ul,
+.recipe p{
+    margin-left: 40px;
+}
+
+.recipe > p {
+    margin-bottom: 40px;
+}
+
+.table p {
+    margin-bottom: 20px;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    border-bottom: 1px solid rgba(133, 70, 50, 25%);
+    position: relative;
+    left: 40px;
+}
+
+.table strong {
+    margin-right: 40px;
+}
